@@ -1,0 +1,77 @@
+/* Box Model */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.caja {
+    width: 500px;
+
+    /* Modelo de caja */
+    margin: 16px;
+    border: 2px solid #1f3864;
+    padding: 20px;
+
+    background-color: white;
+}
+
+.encabezado {
+    background-color: #1f3864;
+    color: white;
+    padding: 20px;
+}
+
+.encabezado h1 {
+    margin: 0;
+}
+
+.linea {
+    height: 8px;
+    background-color: #c59d2a;
+    margin-top: 10px;
+}
+
+.contenido {
+    padding-top: 20px;
+}
+
+.contenido h3 {
+    color: #1f3864;
+    margin-bottom: 15px;
+}
+
+.contenido p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.boton {
+    display: block;
+    width: 100%;
+
+    margin-top: 20px;
+
+    background-color: #1f3864;
+    color: #c59d2a;
+
+    text-align: center;
+    text-decoration: none;
+
+    padding: 12px;
+
+    font-weight: bold;
+}
+
+.boton:hover {
+    opacity: 0.9;
+}
