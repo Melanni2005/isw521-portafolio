@@ -1,0 +1,288 @@
+/* ==========================================================================
+   1. ESTILOS GENERALES Y ACCESIBILIDAD
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Fuentes legibles */
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+/* Enlace de salto para accesibilidad por teclado */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #8B1E2B;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.2s;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* ==========================================================================
+   2. ENCABEZADO Y NAVEGACIÓN (Diseño Base: Móvil < 600px)
+   ========================================================================== */
+header {
+    background-color: #8B1E2B; /* Paleta elegante e idéntica a tu CV */
+    color: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    display: block;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+/* Menú se apila verticalmente por defecto en pantallas pequeñas */
+nav ul {
+    list-style: none;
+    display: block;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+/* Indicador de foco visible para el checklist de accesibilidad */
+nav ul li a:hover, nav ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: 2px solid #ffffff;
+}
+
+/* ==========================================================================
+   3. SECCIÓN DE PERFIL / INTRODUCCIÓN (Diseño Base: Móvil < 600px)
+   ========================================================================== */
+.intro-section {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Contenedor circular del avatar */
+.profile-avatar-container {
+    width: 130px;
+    height: 130px;
+    background-color: #D1B4B7;
+    border-radius: 50%;
+    margin: 0 auto 20px auto; /* Centrado en móviles */
+    border: 3px solid #8B1E2B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Corta las esquinas si pones una imagen real */
+}
+
+.avatar-placeholder {
+    color: #8B1E2B;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #8B1E2B;
+}
+
+.intro-content p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+/* ==========================================================================
+   4. SECCIÓN DE PROYECTOS (Diseño Base: Móvil < 600px)
+   ========================================================================== */
+.portfolio-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.portfolio-container h2 {
+    text-align: center;
+    color: #8B1E2B;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+}
+
+/* Proyectos en una sola fila vertical para móvil */
+.projects-grid {
+    display: block;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+    color: #222222;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    color: #495057;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    color: #8B1E2B;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+.project-link:hover, .project-link:focus {
+    color: #a72434;
+    outline: 2px dashed #8B1E2B;
+    outline-offset: 4px;
+}
+
+/* ==========================================================================
+   5. PIE DE PÁGINA
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #212529;
+    color: #f8f9fa;
+    font-size: 0.85rem;
+    margin-top: 30px;
+}
+
+/* ==========================================================================
+   6. MEDIA QUERIES (RESPONSIVE DESIGN)
+   ========================================================================== */
+
+/* --- PANTALLAS MEDIANAS: de 600px a 1024px (Tablets) --- */
+@media (min-width: 600px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    /* El menú pasa a ser horizontal y centrado */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    nav ul li {
+        margin: 0;
+    }
+
+    .intro-section {
+        padding: 40px 20px;
+    }
+
+    /* Muestra los proyectos distribuidos en 2 columnas exactas */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .project-card {
+        margin-bottom: 0; /* Espaciado automático gestionado por el gap */
+    }
+}
+
+/* --- PANTALLAS GRANDES: más de 1024px (Escritorio) --- */
+@media (min-width: 1025px) {
+    /* Alineación de la barra con Flexbox */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 80px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+    nav ul {
+        display: flex;
+        gap: 30px;
+    }
+    nav ul li {
+        margin: 0;
+    }
+
+    /* FLEXBOX EVALUADO: Imagen de perfil a la izquierda, contenido a la derecha */
+    .intro-section {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        max-width: 1000px;
+        margin: 40px auto;
+        text-align: left;
+        background-color: transparent;
+        border-bottom: none;
+    }
+    .profile-avatar-container {
+        width: 180px;
+        height: 180px;
+        margin: 0; /* Remueve el centrado que tenía en móviles */
+    }
+    .intro-content {
+        flex: 1; /* Ocupa dinámicamente el ancho restante de la pantalla */
+    }
+
+    /* Muestra los proyectos en 3 columnas usando CSS Grid */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    .project-card {
+        margin-bottom: 0;
+    }
+}

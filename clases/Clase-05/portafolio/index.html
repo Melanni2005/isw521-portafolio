@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Melanni Michel Díaz Ugalde</title>
+    
+    <!-- Enlace de conexión con el archivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Enlace de accesibilidad para saltar directamente al contenido principal con el teclado -->
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Encabezado Principal y Menú de Navegación -->
+    <header>
+        <div class="header-container">
+            <h1>Melanni Michel Díaz Ugalde</h1>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#perfil">Sobre Mí</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor del Contenido Principal -->
+    <main id="contenido-principal">
+
+        <!-- Sección de Perfil / Introducción -->
+        <section id="perfil" class="intro-section" aria-label="Sobre mí">
+            <div class="profile-avatar-container">
+                <!-- Si en el futuro agregas una foto real, descomenta la línea de abajo -->
+                <!-- <img src="img/avatar.png" alt="Foto de perfil de Melanni Michel Díaz Ugalde" class="profile-image"> -->
+                <span class="avatar-placeholder" aria-hidden="true">[ MMDU ]</span>
+            </div>
+            <div class="intro-content">
+                <h2>Mi Portafolio</h2>
+                <p>Estudiante de Ingeniería en Software. Enfocada en el desarrollo de sistemas estructurados, el diseño eficiente de bases de datos relacionales y el aseguramiento de la calidad de software (QA).</p>
+            </div>
+        </section>
+
+        <!-- Sección del Listado de Proyectos -->
+        <section id="proyectos" class="portfolio-container" aria-labelledby="titulo-proyectos">
+            <h2 id="titulo-proyectos">Proyectos Desarrollados</h2>
+            
+            <div class="projects-grid">
+
+                <!-- Proyecto 1 -->
+                <article class="project-card">
+                    <h3>Sistema de Gestión de Cementerio</h3>
+                    <p>Aplicación de escritorio construida con C++Builder y SQL Server enfocada en la gestión de nichos y exhumaciones, implementando una base de datos completamente normalizada.</p>
+                    <a href="https://github.com/" class="project-link" target="_blank" rel="noopener" aria-label="Ver repositorio del proyecto Sistema de Gestión de Cementerio en GitHub">Ver Repositorio &rarr;</a>
+                </article>
+
+                <!-- Proyecto 2 -->
+                <article class="project-card">
+                    <h3>Componentes con Svelte Framework</h3>
+                    <p>Investigación técnica estructurada y desarrollo de componentes interactivos y dinámicos (formularios de tareas y listas de control) utilizando Svelte y Git.</p>
+                    <a href="https://github.com/" class="project-link" target="_blank" rel="noopener" aria-label="Ver demostración del proyecto Svelte en GitHub">Ver Demostración &rarr;</a>
+                </article>
+
+                <!-- Proyecto 3 -->
+                <article class="project-card">
+                    <h3>Plan de Pruebas - Pizza Vida</h3>
+                    <p>Proyecto de Aseguramiento de la Calidad (QA) donde se desarrolló un plan integral enfocado en la auditoría de adaptabilidad móvil y responsividad de un sitio web.</p>
+                    <a href="https://github.com/" class="project-link" target="_blank" rel="noopener" aria-label="Ver plan de pruebas del proyecto Pizza Vida en GitHub">Ver Plan de QA &rarr;</a>
+                </article>
+
+                <!-- Proyecto 4 -->
+                <article class="project-card">
+                    <h3>Simulador "Robot Limpieza"</h3>
+                    <p>Programa desarrollado en Java (NetBeans) aplicando principios de Programación Orientada a Objetos, estructurado de forma modular mediante paquetes lógicos.</p>
+                    <a href="https://github.com/" class="project-link" target="_blank" rel="noopener" aria-label="Ver código del simulador Robot Limpieza en GitHub">Ver Código Fuente &rarr;</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página Informativo -->
+    <footer>
+        <p>&copy; 2026 Melanni Michel Díaz Ugalde. Todos los derechos reservados.</p>
+        <p>Diseñado cumpliendo pautas de accesibilidad y requerimientos responsivos modernos.</p>
+    </footer>
+
+</body>
+</html>
